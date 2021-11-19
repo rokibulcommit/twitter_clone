@@ -34,14 +34,13 @@ import {
 
 interface Props {
   showPicture?: boolean;
-  retweeted?: boolean;
 }
 
 export interface AvatarProps {
   avatar: string;
 }
 
-const Tweet: React.FC<Props> = ({ showPicture = false, retweeted = false }) => {
+const Tweet: React.FC<Props> = ({ showPicture = false }) => {
   const classes = useStyles();
   const tweets = [
     {
