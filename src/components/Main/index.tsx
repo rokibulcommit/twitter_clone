@@ -4,19 +4,6 @@ import { MdVerified } from 'react-icons/md';
 import ProfilePage from '../ProfilePage';
 import { Container, Header, BackIcon, ProfileInfo, BottomMenu, HomeIcon, SearchIcon, BellIcon, EmailIcon } from './styles';
 
-export const ProfileName = ({ name }: { name?: string }): any => {
-  return (
-    <strong>
-      {name}
-      <MdVerified className="verifiedIcon" />
-    </strong>
-  );
-};
-
-ProfileName.defaultProps = {
-  name: 'Twitter',
-};
-
 const Main: React.FC = () => {
   return (
     <Container>
@@ -26,7 +13,10 @@ const Main: React.FC = () => {
         </button>
 
         <ProfileInfo>
-          <ProfileName name="Twitter" />
+          <strong>
+            Twitter
+            <MdVerified className="verifiedIcon" />
+          </strong>
           <span>14.8K Tweets</span>
         </ProfileInfo>
       </Header>
